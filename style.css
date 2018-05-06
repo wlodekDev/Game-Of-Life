@@ -5,14 +5,14 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #cccccc;
+    background-color: rgba(255,210,0,.8);
 }
 
 #board div {
     width: 10px;
     height: 10px;
-    border: 1px solid #cccccc;
-    background-color: #ffffff;
+    border: 1px solid rgb(204,20,169);
+    background-color: rgb(178,0,144);
     float: left;
 }
 
@@ -33,4 +33,22 @@ body {
 #game-menu {
     margin: 50px auto;
     width: auto;
+}
+
+#game-set {
+    display: flex;
+    justify-content: center;
+}
+
+#game-set button {
+    margin: 2rem;
+    border-radius: 50px 50px;
+    background-color: rgb(0,205,244);
+    outline: none;
+}
+
+button i {
+    font-size: 3rem;
+    background-color: rgb(0,205,244);
+    border-radius: 50px 50px;
 }

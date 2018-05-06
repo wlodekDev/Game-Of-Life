@@ -44,6 +44,57 @@ document.addEventListener("DOMContentLoaded", function () {
                 this.setCellState(4, 2, "live");
             };
 
+            this.gun = function () {
+                this.setCellState(15,10, "live");
+                this.setCellState(15,11, "live");
+                this.setCellState(16,10, "live");
+                this.setCellState(16,11, "live");
+
+                this.setCellState(24,7, "live");
+                this.setCellState(24,8, "live");
+                this.setCellState(25,8, "live");
+                this.setCellState(26,8, "live");
+                this.setCellState(27,8, "live");
+                this.setCellState(25,9, "live");
+                this.setCellState(26,9, "live");
+                this.setCellState(27,9, "live");
+                this.setCellState(28,9, "live");
+                this.setCellState(25,10, "live");
+                this.setCellState(28,10, "live");
+                this.setCellState(25,11, "live");
+                this.setCellState(26,11, "live");
+                this.setCellState(27,11, "live");
+                this.setCellState(28,11, "live");
+                this.setCellState(24,12, "live");
+                this.setCellState(25,12, "live");
+                this.setCellState(26,12, "live");
+                this.setCellState(27,12, "live");
+                this.setCellState(24,13, "live");
+
+                this.setCellState(36,12, "live");
+                this.setCellState(37,12, "live");
+                this.setCellState(38,12, "live");
+                this.setCellState(37,11, "live");
+                this.setCellState(38,11, "live");
+                this.setCellState(39,11, "live");
+                this.setCellState(37,13, "live");
+                this.setCellState(38,13, "live");
+                this.setCellState(39,13, "live");
+                this.setCellState(38,10, "live");
+                this.setCellState(40,10, "live");
+                this.setCellState(39,9, "live");
+                this.setCellState(40,9, "live");
+                this.setCellState(38,14, "live");
+                this.setCellState(40,14, "live");
+                this.setCellState(39,15, "live");
+                this.setCellState(40,15, "live");
+
+                this.setCellState(47,11, "live");
+                this.setCellState(48,11, "live");
+                this.setCellState(47,12, "live");
+                this.setCellState(48,12, "live");
+            };
+
             this.computeCellNextState = function (x, y) {
                 var sibllAr = [];
 
@@ -118,21 +169,21 @@ document.addEventListener("DOMContentLoaded", function () {
             };
         };
 
-            var self = this;
-            var interval;
+        var self = this;
+        var interval;
 
-            playBtn.addEventListener('click', function () {
-                interval = setInterval(function () {
-                    self.computeNextGeneration();
-                    self.printNextGeneration();
-                }, 100);
-            });
-    
-            pauseBtn.addEventListener('click', function () {
-    
-                interval = clearInterval(interval);
-    
-            });
+        playBtn.addEventListener('click', function () {
+            interval = setInterval(function () {
+                self.computeNextGeneration();
+                self.printNextGeneration();
+            }, 100);
+        });
+
+        pauseBtn.addEventListener('click', function () {
+
+            interval = clearInterval(interval);
+
+        });
     }
 
     var widthAsk = "";
@@ -140,8 +191,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function start() {
 
-        widthAsk = prompt("Write down a number which will be a width of your matrix:");
-        heightAsk = prompt("Write down a number which will be a height of your matrix: ");
+        widthAsk = prompt("Write down a number which will be a width of your matrix " +
+            "(recommended amount of width cells is 100)");
+        heightAsk = prompt("Write down a number which will be a height of your matrix " +
+            "(recommended amount of height cells is 100)");
     }
 
     start();
@@ -149,5 +202,5 @@ document.addEventListener("DOMContentLoaded", function () {
     var game = new GameOfLife(widthAsk,heightAsk);
     game.createBoard();
     game.firstGlider();
-
+    game.gun();
 });
