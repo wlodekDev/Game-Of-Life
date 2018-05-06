@@ -3,7 +3,8 @@ The "game" is a zero-player-game, meaning that its evolution is determined by it
  requiring no further input. One interacts with the Game of Life by creating an initial 
 configuration and observing how it evolves, or, for advanced "players", by creating patterns 
 with particular properties.
-In other words, every single cell on the board can have two states: alive or dead.
+
+In other words, every single cell on the board can have two states: alive or dead:
 - every living cell with less than two living neighbors dies because of too little population
 - every living cell with two or three living neighbors lives on
 - every living cell with more than three living neighbors dies due to overcrowding
